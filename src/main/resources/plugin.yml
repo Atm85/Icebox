@@ -1,0 +1,8 @@
+name: Icebox
+main: Icebox.Main
+author: Atom#7489
+api: 1.0.0
+version: 0.0.1
+
+depend:
+  - LuckPerms
