@@ -1,12 +1,15 @@
 package Icebox;
 
+import Icebox.events.*;
 import cn.nukkit.plugin.PluginBase;
 
 public class Main extends PluginBase {
 
     @Override
     public void onEnable() {
-        getLogger().info("Break the ice with Icebox, chat formatter by Atom#7489");
+        getServer().getPluginManager().registerEvents(new JoinEvent(this), this);
+        getServer().getPluginManager().registerEvents(new QuitEvent(this), this);
+        getServer().getPluginManager().registerEvents(new ChatEvent(this), this);
     }
 }
 
