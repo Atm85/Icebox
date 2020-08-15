@@ -20,11 +20,11 @@ public class QuitEvent implements Listener {
 
         Player player = event.getPlayer();
 
-        if (plugin.chatFormat.get(player.getName()) == null ) {
+        if (plugin.chatFormat.get(player.getName()) != null ) {
             plugin.chatFormat.remove(player.getName());
         }
 
-        if (plugin.nametagFormat.get(player.getName()) == null) {
+        if (plugin.nametagFormat.get(player.getName()) != null) {
             plugin.nametagFormat.remove(player.getName());
         }
 
