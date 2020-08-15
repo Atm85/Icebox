@@ -38,5 +38,6 @@ public class JoinEvent implements Listener {
 
         plugin.chatFormat.put(player.getName(), configValue.get("chat-format"));
         plugin.nametagFormat.put(player.getName(), configValue.get("nametag"));
+        player.setNameTag(plugin.getNametagFormat(player));
     }
 }
