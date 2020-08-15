@@ -14,6 +14,8 @@ public class JoinEvent implements Listener {
 
     Main plugin;
 
+    Map<String, String> configValue;
+
     public JoinEvent(Main plugin) {
         this.plugin = plugin;
     }
@@ -27,7 +29,7 @@ public class JoinEvent implements Listener {
         assert luckpermsUser != null;
         String group = luckpermsUser.getPrimaryGroup();
 
-        Map<String, String> configValue = (Map<String, String>) plugin.config.get(group);
+        configValue = (Map<String, String>) plugin.config.get(group);
         if (configValue == null) {
             luckpermsUser.setPrimaryGroup("default");
             configValue = (Map<String, String>) plugin.config.get("default");
