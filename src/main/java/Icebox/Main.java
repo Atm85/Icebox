@@ -22,12 +22,12 @@ public class Main extends PluginBase {
     /**
      * Map containing the formatted string for a players chat output
      */
-    public Map<String, String> chatFormat;
+    public Map<String, String> chatFormat = new HashMap<>();
 
     /**
      * Map containing the formatted string for a players nametag
      */
-    public Map<String, String> nametagFormat;
+    public Map<String, String> nametagFormat = new HashMap<>();
 
     /**
      * PlaceholderAPI
